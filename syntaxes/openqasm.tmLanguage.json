@@ -1,0 +1,96 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "openqasm",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#brackets"
+        },
+        {
+            "include": "#variableDefinitions"
+        },
+        {
+            "include": "#variableUsages"
+        },
+        {
+            "name": "constant.character.openqasm",
+            "match": "\\b(theta|pi)\\b"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.openqasm",
+                "match": "\\b(OPENQASM|include|qubit|x|y|z|in|reset|for|return|mutable|readonly|#dim|stretch|delay|barrier|box|input|output|if|else|int|float|bit|bool|uint|angle|complex|const|defcal|def|array|duration|let|measure)\\b"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.openqasm",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.openqasm",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.openqasm",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.openqasm",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.openqasm",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        },
+        "brackets": {
+            "patterns": [
+                {
+                    "name": "punctuation.bracket.openqasm",
+                    "match": "[\\[\\]\\(\\)\\{\\}]"
+                }
+            ]
+        },
+        "variableDefinitions": {
+            "patterns": [
+                {
+                    "name": "variable.other.definition.openqasm",
+                    "match": "\\b(int|float|qubit|bit|bool|uint|angle|complex|const|array|duration|let)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+                }
+            ]
+        },
+        "variableUsages": {
+            "patterns": [
+                {
+                    "name": "variable.other.openqasm",
+                    "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.qasm"
+}

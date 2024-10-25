@@ -1,0 +1,37 @@
+{
+  "name": "openqasm",
+  "displayName": "OpenQASM 2/3",
+  "description": "VS-Code Language support for OpenQASM 2/3",
+  "version": "0.0.0",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "author": {
+    "name": "Zander Lewis",
+    "email": "zander@zanderlewis.dev",
+    "url": "https://zanderlewis.dev"
+  },
+  "publisher": "zanderlewis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zanderlewis/openqasm-vscode"
+  },
+  "license": "MIT",
+  "readme": "README.md",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "openqasm",
+      "aliases": ["OpenQASM", "openqasm", "qasm", "QASM", "qiskit", "Qiskit"],
+      "extensions": [".qasm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "openqasm",
+      "scopeName": "source.qasm",
+      "path": "./syntaxes/openqasm.tmLanguage.json"
+    }]
+  }
+}
