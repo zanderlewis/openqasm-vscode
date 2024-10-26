@@ -2,7 +2,7 @@
   "name": "openqasm",
   "displayName": "OpenQASM 2/3",
   "description": "VS-Code Language support for OpenQASM 2/3",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "engines": {
     "vscode": "^1.94.0"
   },

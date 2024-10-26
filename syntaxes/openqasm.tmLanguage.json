@@ -25,15 +25,17 @@
         },
         {
             "name": "constant.character.openqasm",
-            "match": "\\b(theta|pi)\\b"
+            "match": "\\b(theta|pi|θ|π|@)\\b"
         }
     ],
     "repository": {
         "keywords": {
-            "patterns": [{
-                "name": "keyword.control.openqasm",
-                "match": "\\b(OPENQASM|include|qubit|x|y|z|in|reset|for|return|mutable|readonly|#dim|stretch|delay|barrier|box|input|output|if|else|int|float|bit|bool|uint|angle|complex|const|defcal|def|array|duration|let|measure)\\b"
-            }]
+            "patterns": [
+                {
+                    "name": "keyword.control.openqasm",
+                    "match": "\\b(OPENQASM|include|qubit|in|reset|for|return|mutable|readonly|#dim|stretch|delay|barrier|box|input|output|if|else|int|float|bit|bool|uint|angle|complex|const|defcal|def|array|duration|let|measure|pragma|defcalgrammar|cal|qreg|creg|extern|port|frame|waveform)\\b"
+                }
+            ]
         },
         "strings": {
             "name": "string.quoted.double.openqasm",
